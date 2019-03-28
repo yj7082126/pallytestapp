@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnchorActivity">
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <Button
+    android:id="@+id/arGo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onArClick"
+    android:text="Test for ARCore"
+    android:textAllCaps="false"
+    android:layout_below="@+id/sample_text" />
+
+    <Button
+        android:id="@+id/arBasicDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBasicDemoClick"
+        android:text="Local Only Demos"
+        android:textAllCaps="false"
+        android:layout_below="@+id/sample_text"  />
+
+    <Button
+        android:id="@+id/arSharedDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSharedDemoClick"
+        android:text="Shared Demo"
+        android:textAllCaps="false"
+        android:layout_below="@+id/sample_text"  />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        app:itemBackground="@color/colorPrimary"
+        app:menu="@menu/activity_main" />
+
+</RelativeLayout>
